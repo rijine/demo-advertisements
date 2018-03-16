@@ -5,9 +5,11 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import { AdvertisementsRoutingModule } from './advertisements-routing.module';
-import { HomeComponent } from './containers';
 import { advertisementReducers, advertisementEffects } from './store';
+
 import { AdService } from './services';
+import { AdvertisementPreviewComponent } from './containers';
+import { AdvertisementCardComponent, AdvertisementListComponent } from './components';
 
 @NgModule({
   imports: [
@@ -18,7 +20,7 @@ import { AdService } from './services';
     StoreModule.forFeature('advertisements', advertisementReducers),
     EffectsModule.forFeature(advertisementEffects)
   ],
-  declarations: [HomeComponent],
+  declarations: [AdvertisementCardComponent, AdvertisementListComponent, AdvertisementPreviewComponent],
   providers: [AdService]
 })
 export class AdvertisementsModule {}

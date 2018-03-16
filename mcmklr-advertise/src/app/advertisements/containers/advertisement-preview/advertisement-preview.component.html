@@ -1,0 +1,4 @@
+<div>
+  <div>{{ (ads$ | async)?.length | json }}</div>
+  <advertisement-list [ads]="ads$ | async"> </advertisement-list>
+</div>

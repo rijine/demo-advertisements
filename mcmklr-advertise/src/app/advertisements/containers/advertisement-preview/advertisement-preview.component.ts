@@ -9,16 +9,14 @@ import * as adsActions from './../../store/actions/ad.actions';
 import { Ad } from '../../store/models/ad.model';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-advertisement-preview',
+  templateUrl: './advertisement-preview.component.html',
+  styleUrls: ['./advertisement-preview.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class AdvertisementPreviewComponent implements OnInit {
   ads$: Observable<any[]>;
 
-  constructor(private store: Store<adsReducer.State>) {
-
-  }
+  constructor(private store: Store<adsReducer.State>) {}
 
   ngOnInit() {
     this.store.dispatch(new adsActions.LoadAds());
@@ -27,5 +25,4 @@ export class HomeComponent implements OnInit {
       console.log(d)
     } ); */
   }
-
 }
