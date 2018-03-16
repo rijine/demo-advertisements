@@ -2,15 +2,18 @@ import { EntityState, EntityAdapter, createEntityAdapter } from '@ngrx/entity';
 import { Ad } from '../models/ad.model';
 import { Status } from '../models/status.model';
 import { AdActions, AdActionTypes } from '../actions/ad.actions';
+import { Paging } from '../models/ad.paging.model';
 
 export interface State extends EntityState<Ad> {
   status: Status;
+  paging: Paging;
 }
 
 export const adapter: EntityAdapter<Ad> = createEntityAdapter<Ad>();
 
 export const initialState: State = adapter.getInitialState({
-  status: new Status({})
+  status: new Status({}),
+  paging: new Paging({})
 });
 
 export function reducer(

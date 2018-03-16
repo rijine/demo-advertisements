@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new adsActions.LoadAds());
-    this.ads$ = this.store.select(adsSelector.selectAll);
+    this.ads$ = this.store.select(adsSelector.selectAllByPages);
     /* .subscribe((d) => {
       console.log(d)
     } ); */

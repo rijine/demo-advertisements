@@ -1,4 +1,4 @@
-# Front-End Interview Test
+# Front-End Code Practice
 
 This is a simple front-end code challenge created to serve two purposes:
 

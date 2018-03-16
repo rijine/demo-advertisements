@@ -13,5 +13,16 @@ export const {
   selectIds,
   selectEntities,
   selectAll,
-  selectTotal,
+  selectTotal
 } = adsReducer.adapter.getSelectors(selectAdsState);
+
+export const selectAdsPaging = createSelector(
+  selectAdsState,
+  state => state.paging
+);
+
+export const selectAllByPages = createSelector(
+  selectAll,
+  selectAdsPaging,
+  (ads, page) => ads.slice(page.offset, page.limit)
+);
