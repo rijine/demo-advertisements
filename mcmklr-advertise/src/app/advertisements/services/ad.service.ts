@@ -44,6 +44,7 @@ export class AdService {
       return {
         id: ad['_id']['$id'],
         title: ad.title,
+        purpose: ad.purpose,
         advertisementThumbnails: advertisementThumbnails,
         realestateSummary: ad.realestateSummary,
         advertisementPrice: ad.advertisementPrice

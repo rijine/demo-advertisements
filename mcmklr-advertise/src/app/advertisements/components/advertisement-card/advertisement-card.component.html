@@ -1,7 +1,7 @@
 <div class="widget-ad-card">
   <a>
     <div class="type">
-      Mienten
+      {{ (ad.purpose === 0) ? 'Mieten': 'Verkaufen'}}
     </div>
     <div class="img-container">
       <img class="img" [src]="ad.advertisementThumbnails[0]" alt="">
