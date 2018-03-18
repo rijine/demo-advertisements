@@ -1,3 +1,6 @@
-<div *ngFor="let ad of ads">
-  <advertisement-card [ad]="ad"></advertisement-card>
+<div class="container-fluid">
+  <div class="row">
+    <app-advertisement-card [ad]="ad" *ngFor="let ad of ads" class="col-xs-12 col-sm-5 col-md-4"></app-advertisement-card>
+  </div>
+  <div class="ad-list-footer"></div>
 </div>

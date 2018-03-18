@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 import { Ad } from '../../store/models/ad.model';
 
 @Component({
-  selector: 'advertisement-card',
+  selector: 'app-advertisement-card',
   templateUrl: './advertisement-card.component.html',
   styleUrls: ['./advertisement-card.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -1,3 +1,25 @@
-<div>
-  {{ad.title}}
+<div class="widget-ad-card">
+  <a>
+    <div class="type">
+      Mienten
+    </div>
+    <div class="img-container">
+      <img class="img" [src]="ad.advertisementThumbnails[0]" alt="">
+    </div>
+    <div class="heading">
+      <div class="title">
+        {{ad.title}}
+      </div>
+      <div class="location">
+        {{ad.realestateSummary?.address?.postalCode}} {{ad.realestateSummary?.address?.street}} / {{ad.realestateSummary?.address?.city}}
+      </div>
+    </div>
+    <div class="footer d-flex justify-content-between">
+      <div class="price">€ {{ad.advertisementPrice?.sellPrice ? ad.advertisementPrice?.sellPrice : ad.advertisementPrice?.baseRent }}</div>
+      <div class="more-info">
+        <span class="rooms">{{ad.realestateSummary?.numberOfRooms}} Zimmer</span> |
+        <span class="space">ab {{ad.realestateSummary?.space | spaceFormat}} m²</span>
+      </div>
+    </div>
+  </a>
 </div>

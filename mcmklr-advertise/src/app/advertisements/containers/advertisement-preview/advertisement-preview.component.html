@@ -1,4 +1,5 @@
 <div>
-  <div>{{ (ads$ | async)?.length | json }}</div>
-  <advertisement-list [ads]="ads$ | async"> </advertisement-list>
+  <!--   <div>{{ (ads$ | async)?.length | json }}</div> -->
+  <h1 class="page-title">Advertisements</h1>
+  <app-advertisement-list [ads]="ads$ | async"> </app-advertisement-list>
 </div>
