@@ -1,5 +1,8 @@
 <div>
   <!--   <div>{{ (ads$ | async)?.length | json }}</div> -->
-  <h1 class="page-title">Advertisements</h1>
+  <h1 class="page-title">Advertisements
+  </h1>
+  <h4 *ngIf="(loading$ | async)?.loading">Loading...</h4>
+
   <app-advertisement-list [ads]="ads$ | async"> </app-advertisement-list>
 </div>

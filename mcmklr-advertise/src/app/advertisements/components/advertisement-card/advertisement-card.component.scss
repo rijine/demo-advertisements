@@ -28,6 +28,7 @@ $widget-ad-card-type-bgcolor: #ffffff;
 
 @mixin ad-card-title {
     display: block;
+    cursor: pointer;
 }
 
 @mixin ad-card-location {

@@ -15,12 +15,14 @@ import { Ad } from '../../store/models/ad.model';
 })
 export class AdvertisementPreviewComponent implements OnInit {
   ads$: Observable<any[]>;
+  loading$: Observable<any>;
 
   constructor(private store: Store<adsReducer.State>) {}
 
   ngOnInit() {
     this.store.dispatch(new adsActions.LoadAds());
     this.ads$ = this.store.select(adsSelector.selectAllByPages);
+    this.loading$ = this.store.select(adsSelector.selectAdsStatus);
     /* .subscribe((d) => {
       console.log(d)
     } ); */

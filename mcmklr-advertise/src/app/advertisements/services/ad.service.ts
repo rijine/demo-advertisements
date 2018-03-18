@@ -7,8 +7,8 @@ import { Ad } from '../store/models/ad.model';
 
 @Injectable()
 export class AdService {
-  // public url = 'v1/advertisements';
-  public url = '/assets/data/ads.json';
+  public url = 'v1/advertisements';
+  // public url = '/assets/data/ads.json';
   constructor(private http: HttpClient) {}
 
   getAds() {

@@ -26,3 +26,8 @@ export const selectAllByPages = createSelector(
   selectAdsPaging,
   (ads, page) => ads.slice(page.offset, page.limit)
 );
+
+export const selectAdsStatus = createSelector(
+  selectAdsState,
+  state => state.status
+);
