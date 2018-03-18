@@ -54,7 +54,7 @@ export function reducer(
     }
 
     case AdActionTypes.LoadAds: {
-      //return adapter.addAll(action.payload.ads, state);
+      // return adapter.addAll(action.payload.ads, state);
       return {
         ...state,
         status: new Status({

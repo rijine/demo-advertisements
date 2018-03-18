@@ -5,7 +5,8 @@ import { Observable } from 'rxjs/Observable';
 import { AdEffects } from './ad.effects';
 
 describe('AdService', () => {
-  let actions$: Observable<any>;
+  // let actions$: Observable<any>
+  const actions$: Observable<any> = null;
   let effects: AdEffects;
 
   beforeEach(() => {
